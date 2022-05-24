@@ -16,8 +16,45 @@ body {
   -webkit-filter: blur(2px);
 }
 
-.content {
+.App header {
   position: relative;
-  border: 5px solid red;
-  color: red;
+  width: 100%;
+  text-align: center;
+}
+
+.App header nav ul {
+  background-color: #f5f6fa;
+  border: 2px solid #487eb0;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 20%;
+  min-width: 10%;
+  position: relative;
+  left: 37vmax;
+}
+
+.App header nav li {
+  list-style-type: none;display: inline-block;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  color: #487eb0;
+}
+
+.App header nav li:hover {
+  color: #e84118;
+  border-bottom: 1px solid #e84118;
+}
+
+@media only screen and (max-width: 140vh) {
+  
+  .App header nav ul{
+    left: 30vmax;
+  }
+}
+
+@media only screen and (max-width: 90vh) {
+
+  .App header nav ul {
+    left: 15vmax;
+  }
 }
