@@ -10,6 +10,7 @@ export class Quizz1 extends React.Component {
             age: 22,
             origin: 'Ivory Coast',
             sex: 'man',
+            smth: 'Fill the form and you will see something else than myself here.',
             message: 'Fill the form and you will see something else than myself here.'
         };
 
@@ -24,7 +25,7 @@ export class Quizz1 extends React.Component {
             message: 'So you are '+ this.state.name +', you are ' + this.state.age + ' and your sex is ' + this.state.sex +
             '. I am sorry, I am kinda new to this sexuality name thing, I apologise in advance if I hurt someone feelings.' +
             ' Returning in context, you also live in ' + this.state.origin + '. Ok, seems like you are cool 😊' + 
-            'Oh and you also said that to me : ' + this.state.message
+            'Oh and you also said that to me : ' + this.state.smth
         })
     }
 
@@ -46,25 +47,25 @@ export class Quizz1 extends React.Component {
                     <p>Simple questions</p>
                     <div className='form-content-layout'>
                         <label htmlFor="name">What's your name?</label><br/>
-                        <input type="text" id='name' name='name' onChange={this.handleInputChange} placeholder='Enter your name'/> 
+                        <input type="text" id='name' name='name' onChange={this.handleInputChange} placeholder='Name'/> 
                         <br/>
                     </div>
     
                     <div className='form-content-layout'>
                         <label htmlFor="age">How old are you?</label><br/>
-                        <input type="text" id='age' name='age' onChange={this.handleInputChange} placeholder='Enter your age'/>
+                        <input type="text" id='age' name='age' onChange={this.handleInputChange} placeholder='Age'/>
                         <br/>
                     </div>
     
                     <div className='form-content-layout'>
                         <label htmlFor='origin'>Where are you from?</label><br/>
-                        <input type="text" id='origin' name='origin' onChange={this.handleInputChange} placeholder='Enter your origin'/>
+                        <input type="text" id='origin' name='origin' onChange={this.handleInputChange} placeholder='Origin'/>
                         <br/>
                     </div>
     
                     <div className='form-content-layout'>
                         <label htmlFor='sex'>Whats' your gender?</label><br/>
-                        <input type="radio" id='man' name='sex' onChange={this.handleInputChange}value='man'/>
+                        <input type="radio" id='man' name='sex' onChange={this.handleInputChange} value='man'/>
                         <label htmlFor='man'>Man</label><br/>
                         <input type="radio" id='woman' name='sex' onChange={this.handleInputChange} value='woman'/>
                         <label htmlFor='woman'>Woman</label><br/>
@@ -73,11 +74,11 @@ export class Quizz1 extends React.Component {
                     </div>
     
                     <div className='form-content-layout'>
-                        <label htmlFor='message'>Would you like to say something?</label><br/>
-                        <textarea id='message' name='message' onChange={this.handleInputChange} placeholder='Write something here'/><br/>
+                        <label htmlFor='smth'>Would you like to say something?</label><br/>
+                        <textarea id='smth' name='smth' onChange={this.handleInputChange} placeholder='Write something here'/><br/>
                     </div>
     
-                    <input type='submit' value='Submit' onClick={this.handleSubmit}/>
+                    <input className='button' type='submit' value='Submit' onClick={this.handleSubmit}/>
     
                     <div className='message'>
                         {this.state.message}
